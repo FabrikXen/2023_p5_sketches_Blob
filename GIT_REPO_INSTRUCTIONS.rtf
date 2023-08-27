@@ -1,0 +1,147 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red251\green2\blue255;\red217\green11\blue5;\red46\green111\blue253;
+\red0\green0\blue0;\red27\green31\blue35;\red0\green0\blue0;\red255\green249\blue89;\red0\green0\blue0;
+\red63\green105\blue30;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c25279\c100000;\cssrgb\c88946\c14202\c0;\cssrgb\c22750\c53231\c99501;
+\cssrgb\c0\c0\c0;\cssrgb\c14118\c16078\c18431;\csgray\c0\c0;\cssrgb\c100000\c96976\c42052;\csgray\c0;
+\cssrgb\c30831\c47797\c15540;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh15580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 This git repo has a remote called origin on git hub. \
+\
+To see name: \
+\
+\cf2 $ git remote\cf0 \
+\
+\cf2 $ git remote -v\cf0 \
+\
+To stop files being tracked by git:\
+\
+\cf2 $ rm -rf .git \cf0 \
+\
+.git is the folder where the tracked files go \
+\
+To see what files are being tracked: \
+\
+\cf2 $ git status \cf0 \
+\
+The .\cf3 gitignore \cf0 contains all files that you do not want tracked or added to stating stage! \
+\
+To see all files use: \cf4 $ la -la \cf0 \
+\
+Add files to textile\cf3  gitignore \cf0 to add for example that all *.jpg should be ignored by git \
+\
+You first add to staging area: \
+\
+\cf2 $ git add -A \cf0 	( to add all files, or put specific name) \
+\
+To remove files from staging area to working directory as untracked files:\
+\
+\cf2 $ git reset <name> or leave blank to remove everything \cf0 \
+\
+Then you commit it: \
+\
+\cf2 $ git commit -m \'93Description of commit\'94 \
+\
+\cf5 To see recent commits:\
+\
+\cf2 $ git log\cf0 \
+\
+Then push changes in local repo to GitHub.com (origin):\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs20 \cf6 \expnd0\expndtw0\kerning0
+# Pushes the changes in your local repository up to the remote repository you specified as the origin
+\fs27\fsmilli13600 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\cf2 $ git push -u origin main 		( or $ git push origin master ) \
+\
+\cf0 ( use git pull if you have a project where other people make changes: \cf2 \
+$ git pull origin master )\
+\
+\cf0 \cb7 To l\cb1 ist all branches in repo locally and remotely: \
+\cf2 \
+$ git branch -a \
+\
+\cf0 See changes to code: \
+\
+\cf2 $ git diff \
+\
+\cf0 \cb8 If you delete or rename a file/folder on local -> need to commit this then push change to remote: \cf2 \cb1 \
+\
+$ 
+\f2\fs22 \cf9 \CocoaLigature0 git commit -a -m "folder was renamed"\
+$ git push 
+\f0\fs24 \cf2 \CocoaLigature1 \
+\
+
+\fs28 \cf10 \ul \ulc10 Common workflow:\ulnone \
+\
+Create a branch to work on a desired feature \
+\
+$ git branch branch_name \
+$ git checkout branch_name \
+\
+Work off that branch. \
+\
+To list branches: \
+$ git branch \
+\
+To work on a specific branch - use checkout with name \
+\
+Add changes to staging area on that branch: \
+$ git add -A\
+$ git commit -m \'93lala\'94\
+\
+To push to branch on remote (origin) : \
+\
+$ git push -u origin branch_name \
+\
+See all branches: \
+$ git branch -a \
+\
+MERGE WITH MASTER: \
+\
+$ git checkout master 			( move to master branch )  \
+\
+$ git pull origin master 			( get unto date )\
+\
+$ git branch \'97merged  		( see what branches have merged )\
+\
+$ git merge branch_name \
+\
+$ git push origin master  		( merge pushed to remote ) \
+\
+Now delete branch \
+\
+Rerun :\
+\
+$ git branch \'97merged 	( to check merge worked) \
+\
+$ git branch -d branch_name  	( delete local)\
+\
+$ git push origin \'97delete branch_name 	( delete on remote)\
+
+\fs24 \cf2 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
